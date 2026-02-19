@@ -1,4 +1,4 @@
-baseURL = "/" # You can use "/" in local
+baseURL = "https://idsfran.github.io" # You can use "/" in local
 languageCode = "en-us"
 title = "idsfran.github.io"
 
