@@ -1,10 +1,11 @@
 ---
-title: "CRL: ¿Accesible al público?."
-description: "Lo que es Accesible"
-tags: ["validación", "blockchain", "pki", "firma digital", "tecnologia"]
+title: "CRL: ¿Accesible al público?"
+date: 2026-02-17T13:20:19+02:00
+tags: ["detalle", "servicios"]
+categories: ["post"]
+author: "Idalina Insfrán"
+noSummary: false
 draft: false
-date: 2025-09-25
-slug: "servicios-de-confianza"
 ---
 
 Este artículo examina el papel de las Listas de Revocación de Certificados (CRL, por sus siglas en inglés) y por qué su publicación, aunque obligatoria, no siempre equivale a un servicio accesible y práctico para el público general. La distinción no es menor: de ella depende la posibilidad real de verificar la validez de documentos firmados digitalmente.
