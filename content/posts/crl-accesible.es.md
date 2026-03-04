@@ -103,7 +103,7 @@ La información contenida puede sintetizarse así:
 
 > [!NOTE]
 > Si un certificado ha expirado y no aparece en el CRL, ¿la firma es válida?
-> No necesariamente. La validación de una firma digital requiere dos condiciones independientes: (1) el certificado debe estar dentro de su período de validez en el momento de la firma, y (2) el certificado no debe haber sido revocado. Para que la fecha de la firma sea verificable con certeza en el tiempo, las firmas deben incorporar un sello de tiempo (*timestamp*) criptográfico —v. {{< link your-e-signature-is-broken >}}.
+> No necesariamente. La validación de una firma digital requiere dos condiciones independientes: (1) el certificado debe estar dentro de su período de validez en el momento de la firma, y (2) el certificado no debe haber sido revocado. Para que la fecha de la firma sea verificable con certeza en el tiempo, las firmas deben incorporar un sello de tiempo (*timestamp*) criptográfico.
 
 ## Lo que debería existir.
 
