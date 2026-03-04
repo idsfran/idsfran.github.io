@@ -5,7 +5,7 @@ tags: ["detalle", "servicios"]
 categories: ["post"]
 author: "Idalina Insfrán"
 noSummary: false
-draft: false
+draft: true
 ---
 
 Este artículo examina el papel de las Listas de Revocación de Certificados (CRL, por sus siglas en inglés) y por qué su publicación, aunque obligatoria, no siempre equivale a un servicio accesible y práctico para el público general. La distinción no es menor: de ella depende la posibilidad real de verificar la validez de documentos firmados digitalmente.
