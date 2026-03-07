@@ -1,4 +1,4 @@
-baseURL = "https://idsfran.github.io/" # You can use "/" in local
+baseURL = "https://idnsfran.github.io/" # You can use "/" in local
 languageCode = "en-us"
 title = "idsfran.github.io"
 
@@ -180,13 +180,14 @@ enableRobotsTXT = true
         languageDirection = 'ltr'
         languageName = 'Español'
         title = "idsfran.github.io"
+        url = "/categories/pagina/"
         [[Languages.es.menu.main]]
             name = "home"
-            url = "/"
+            url = "/categories/pagina/"
             weight = 10
         [[Languages.es.menu.main]]
-            name = "categories"
-            url = "/categories/"
+            name = "posts"
+            url = "/categories/post/"
             weight = 20
         [[Languages.es.menu.main]]
             name = "tags"
@@ -277,9 +278,10 @@ enableRobotsTXT = true
 		languageDirection = 'ltr'
 		languageName = 'English'
 		title = "idsfran.github.io"
+        url = "/en/categories/page/"
 		[[Languages.en.menu.main]]
 		    name = "home"
-		    url = "/en/"
+		    url = "/en/categories/page/"
 		    weight = 10
 		[[Languages.en.menu.main]]
 		    name = "categories"

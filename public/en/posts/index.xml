@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on idsfran.github.io</title>
-    <link>//localhost:1313/en/posts/</link>
+    <link>http://localhost:1313/en/posts/</link>
     <description>Recent content in Posts on idsfran.github.io</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/en/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Judicial Informatics Expertise</title>
-      <link>//localhost:1313/en/posts/hello/</link>
-      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/en/posts/hello/</guid>
-      <description>&lt;h2 id=&#34;digital-forensics-and-trust-services&#34;&gt;Digital Forensics and Trust Services&lt;/h2&gt;&#xA;&lt;p&gt;These are judicial expertise services in the field of informatics, with special emphasis on the analysis of digital evidence, public key infrastructure (PKI), and digital signature systems within the framework of Trust Services.&lt;/p&gt;&#xA;&lt;p&gt;The expert work is oriented towards providing technical clarity in judicial processes where cryptographic technologies, digital certificates, authentication systems, electronic communications, and networks are involved.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;areas-of-expertise&#34;&gt;Areas of Expertise&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Digital Forensics&lt;/strong&gt;&#xA;Technical analysis of devices, systems, and digital records for the identification, preservation, and interpretation of evidence.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Public Key Infrastructure (PKI)&lt;/strong&gt;&#xA;Evaluation of digital certificates, trust chains, validation through CRL/OCSP, and analysis of associated cryptographic mechanisms.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Digital Signatures and Trust Services&lt;/strong&gt;&#xA;Technical verification of signing processes, time stamping, authenticity, integrity, and technical validity of electronic documents.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Applied Cryptography and Asymmetric Encryption&lt;/strong&gt;&#xA;Analysis of the implementation and operation of cryptographic mechanisms in real environments.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Networks and Systems&lt;/strong&gt;&#xA;Technical review of infrastructure, activity logs, and communications architecture.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;&#xA;&lt;p&gt;The expertise is conducted with criteria of:&lt;/p&gt;</description>
-    </item>
+    <atom:link href="http://localhost:1313/en/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

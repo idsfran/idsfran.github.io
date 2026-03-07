@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Author on idsfran.github.io</title>
-    <link>//localhost:1313/en/author/</link>
+    <link>http://localhost:1313/en/author/</link>
     <description>Recent content in Author on idsfran.github.io</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/en/author/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Feb 2026 13:16:19 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/author/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Idalina Insfrán</title>
-      <link>//localhost:1313/en/author/idalina-insfr%C3%A1n/</link>
-      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/en/author/idalina-insfr%C3%A1n/</guid>
+      <link>http://localhost:1313/en/author/idalina-insfr%C3%A1n/</link>
+      <pubDate>Wed, 18 Feb 2026 13:16:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/author/idalina-insfr%C3%A1n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Idalina</title>
+      <link>http://localhost:1313/en/author/idalina/</link>
+      <pubDate>Thu, 25 Jul 2024 13:16:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/author/idalina/</guid>
       <description></description>
     </item>
   </channel>

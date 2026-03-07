@@ -2,109 +2,173 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/author/</loc>
+    <loc>http://localhost:1313/es/servicios/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/enfoque/</loc>
     <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/detalles/</loc>
+    <lastmod>2026-02-17T13:20:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/author/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/author/"
+                href="http://localhost:1313/en/author/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/author/"
+                href="http://localhost:1313/author/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/categories/"
+                href="http://localhost:1313/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/categories/"
+                href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/demo/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/tags/descripci%C3%B3n/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/features/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/es/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/author/idalina-insfr%C3%A1n/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/"
+                href="http://localhost:1313/en/author/idalina-insfr%C3%A1n/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/"
+                href="http://localhost:1313/author/idalina-insfr%C3%A1n/"
                 />
   </url><url>
-    <loc>//localhost:1313/author/mostafa-mirmousavi/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/posts/"
+                href="http://localhost:1313/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/posts/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/sample/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/categories/pagina/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/tags/pericia/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-18T13:10:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/tags/"
+                href="http://localhost:1313/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/test/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/es/crl-accesible/</loc>
+    <lastmod>2026-02-17T13:20:19+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/hello/</loc>
-    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/tags/detalle/</loc>
+    <lastmod>2026-02-17T13:20:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/posts/hello/"
+                href="http://localhost:1313/en/tags/detalle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/posts/hello/"
+                href="http://localhost:1313/tags/detalle/"
                 />
   </url><url>
-    <loc>//localhost:1313/series/</loc>
+    <loc>http://localhost:1313/categories/post/</loc>
+    <lastmod>2026-02-17T13:20:19+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/servicios/</loc>
+    <lastmod>2026-02-17T13:20:19+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/en/series/"
+                href="http://localhost:1313/en/tags/servicios/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="//localhost:1313/series/"
+                href="http://localhost:1313/tags/servicios/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/enfoque/</loc>
+    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/enfoque/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/tags/enfoque/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/author/idalina/</loc>
+    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/author/idalina/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/author/idalina/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/neutralidad/</loc>
+    <lastmod>2024-07-25T13:16:19+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/neutralidad/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/tags/neutralidad/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/series/"
                 />
   </url>
 </urlset>
