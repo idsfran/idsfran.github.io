@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="es">
+
+<head prefix="og: http://ogp.me/ns#"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="http://localhost:1313/">
+    <meta name="author" content="Idalina Insfrán">
+    <meta name="description" content="Pericia judicial.">
+    <meta name="keywords" content="pki, seguridad">
+    <meta name="generator" content="Hugo 0.155.3">
+    <title>
+        
+           
+               CRL: ¿Accesible al público? &vert; idsfran.github.io
+           
+        
+    </title>
+    <meta itemprop="name" content="CRL: ¿Accesible al público?">
+    <meta itemprop="description" content="CRL: ¿Accesible al público? - Pericia judicial.">
+
+    <meta property="og:url" content="http://localhost:1313/posts/crl-accesible/">
+  <meta property="og:site_name" content="idsfran.github.io">
+  <meta property="og:title" content="CRL: ¿Accesible al público?">
+  <meta property="og:description" content="Este artículo examina el papel de las Listas de Revocación de Certificados (CRL, por sus siglas en inglés) y por qué su publicación, aunque obligatoria, no siempre equivale a un servicio accesible y práctico para el público general. La distinción no es menor: de ella depende la posibilidad real de verificar la validez de documentos firmados digitalmente.
+Lo que dice la ley. La norma vigente establece con precisión:
+Los prestadores de servicios de confianza que expidan certificados electrónicos, deben cumplir también las siguientes obligaciones: a) No almacenar ni copiar, … (…) b) Disponer de un servicio de consulta sobre el estado de validez y revocación de los certificados emitidos accesible al público. El término determinante es accesible. La disposición no exige la mera publicación de un archivo técnico, sino la habilitación de un servicio de consulta que cualquier persona pueda utilizar sin conocimientos especializados. Esta distinción es la que, en la práctica, se ignora con mayor frecuencia.">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-17T13:20:19+02:00">
+    <meta property="article:modified_time" content="2026-02-17T13:20:19+02:00">
+    <meta property="article:tag" content="Detalle">
+    <meta property="article:tag" content="Servicios">
+
+    <meta property="og:site_name" content="idsfran.github.io">
+
+    
+
+
+    
+    <link href="http://localhost:1313/posts/crl-accesible/index.xml" rel="alternate" type="application/rss+xml" title="idsfran.github.io" />
+    <link href="http://localhost:1313/posts/crl-accesible/index.xml" rel="feed" type="application/rss+xml" title="idsfran.github.io" />
+    
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/crl-accesible/">
+    
+
+    
+
+
+
+    <link rel="stylesheet" href="http://localhost:1313/theme.css" media="screen">
+
+
+
+    
+
+
+
+    
+    
+
+    
+</head>
+
+<body class="mostafa-hugo-theme ltr">
+    
+
+    <header>
+    <a id="back-to-top-button">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <div class="container">
+        <div class="title-container">
+            <h1 class="title">
+                <a href="http://localhost:1313/">
+                    idsfran.github.io
+                </a>
+            </h1>
+            
+        </div>
+
+        <nav>
+            <ul>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="navigation">
+
+    
+    
+    <div class="pages menu-wrapper">
+        <ul>
+            
+            
+            <li >
+                <a href="/categories/pagina/">home</a>
+            </li>
+            
+            <li >
+                <a href="/categories/">Categorías</a>
+            </li>
+            
+            <li >
+                <a href="/tags/">Etiquetas</a>
+            </li>
+            
+            <li >
+                <a href="/categories/about/">about</a>
+            </li>
+            
+            
+            <li class="active menu-toggle menu-button">
+                <a href="#"></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+
+
+    
+    <div class="languages menu-wrapper">
+        <ul>
+            
+            
+            
+            
+            
+
+            
+            <li class="active menu-toggle"><a href="/posts/crl-accesible/">
+                Español
+            </a></li>
+            
+            
+            
+            
+
+            
+            <li><a href="/en/">
+                English
+            </a></li>
+            
+            
+        </ul>
+    </div>
+    
+
+</div>
+
+
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            
+
+
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="http://localhost:1313/posts/crl-accesible/">
+            CRL: ¿Accesible al público?
+        </a>
+    </h1>
+
+   
+
+    
+        
+
+        <p>Este artículo examina el papel de las Listas de Revocación de Certificados (CRL, por sus siglas en inglés) y por qué su publicación, aunque obligatoria, no siempre equivale a un servicio accesible y práctico para el público general. La distinción no es menor: de ella depende la posibilidad real de verificar la validez de documentos firmados digitalmente.</p>
+<h2 id="lo-que-dice-la-ley">Lo que dice la ley.</h2>
+<p>La norma vigente establece con precisión:</p>
+<blockquote>
+<ol start="2">
+<li>Los prestadores de servicios de confianza que expidan certificados electrónicos, deben cumplir también las siguientes obligaciones:
+a) No almacenar ni copiar, &hellip;
+(&hellip;)
+b) Disponer de un servicio de consulta sobre el estado de validez y revocación de los certificados emitidos accesible al público.</li>
+</ol>
+</blockquote>
+<p>El término determinante es <strong>accesible</strong>. La disposición no exige la mera publicación de un archivo técnico, sino la habilitación de un <em>servicio de consulta</em> que cualquier persona pueda utilizar sin conocimientos especializados. Esta distinción es la que, en la práctica, se ignora con mayor frecuencia.</p>
+<p>La legislación local se inscribe en una tendencia internacional cuyo referente más consolidado es el <strong>Reglamento eIDAS</strong> de la Unión Europea (Reglamento UE 910/2014), que regula los servicios de confianza electrónica y establece estándares de supervisión y accesibilidad equivalentes <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. La premisa de fondo es uniforme: la confianza en los documentos electrónicos exige que cualquier parte interesada —no solo los técnicos— pueda verificar la validez de una firma.</p>
+<h2 id="un-poco-de-contexto-qué-es-un-certificado-digital-y-por-qué-puede-revocarse">Un poco de contexto: qué es un certificado digital y por qué puede revocarse.</h2>
+<p>Una firma digital no es una imagen ni un trazo escaneado. Es el resultado de una operación criptográfica que involucra un <strong>certificado digital</strong>: un archivo emitido por una autoridad certificadora —el Prestador de Servicios de Confianza, o PSC— que vincula la identidad del firmante con una clave criptográfica única.</p>
+<p>Como un documento de identidad, ese certificado tiene fecha de vencimiento. Pero también puede <strong>revocarse antes de su expiración</strong> por razones contempladas en los estándares de Infraestructura de Clave Pública (PKI, <em>Public Key Infrastructure</em>) <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<ul>
+<li><strong>Compromiso de la clave privada</strong>: acceso no autorizado a la clave del titular.</li>
+<li><strong>Cambio de afiliación</strong>: el titular deja una organización y su certificado pierde vigencia institucional.</li>
+<li><strong>Error en la emisión</strong>: el PSC cometió un error al emitirlo.</li>
+<li><strong>Solicitud del titular</strong>: el propio firmante solicita su cancelación.</li>
+</ul>
+<p>Cuando un certificado es revocado, el PSC tiene la obligación de publicar esa información. De no hacerlo —o de hacerlo de forma inaccesible—, quien recibe un documento firmado con ese certificado no tiene manera práctica de conocer su estado real.</p>
+<h2 id="crl-y-ocsp-dos-mecanismos-una-misma-obligación">CRL y OCSP: dos mecanismos, una misma obligación.</h2>
+<p>Existen dos métodos estándar para consultar el estado de revocación de un certificado, ambos especificados en la familia de estándares X.509 <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
+<p><strong>CRL (Certificate Revocation List)</strong>: Lista emitida y firmada criptográficamente por el PSC que contiene todos los certificados revocados hasta la fecha. Se publica periódicamente y quien desee verificar un certificado debe descargar esa lista completa y comprobar si el número de serie en cuestión figura en ella. Es el método más antiguo y, como se verá, el menos compatible con la accesibilidad pública real.</p>
+<p><strong>OCSP (Online Certificate Status Protocol)</strong>: Protocolo definido en el RFC 6960 que permite consultar el estado de un certificado específico en tiempo real <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. En lugar de descargar una lista completa, el sistema de verificación envía una consulta al servidor del PSC y recibe una respuesta inmediata: válido, revocado o desconocido. Es más eficiente, más oportuno y sustancialmente más adecuado para construir servicios de consulta accesibles al público.</p>
+<p>Los navegadores modernos utilizan OCSP de forma transparente al verificar certificados de sitios HTTPS. Sin embargo, en el ámbito de la firma de documentos, varios PSCs locales no ofrecen un servicio OCSP públicamente consultable, y menos aún una interfaz web orientada al ciudadano.</p>
+<h2 id="lo-que-ocurre-en-la-práctica">Lo que ocurre en la práctica.</h2>
+<p>Las bases de datos públicas de los PSCs locales suelen mostrar únicamente los certificados <strong>activos en el momento de la consulta</strong>. Los certificados revocados o expirados no aparecen, lo que genera dos problemas concretos.</p>
+<p>El primero es operativo: al intentar verificar la firma de un documento de años anteriores, el software puede no encontrar el certificado correspondiente y arrojar un resultado negativo, aun cuando la firma fuera completamente válida en su momento.</p>
+<p>El segundo problema es más serio: <strong>la ausencia de información histórica sobre revocaciones impide determinar si un certificado fue invalidado por razones de seguridad.</strong> Considérese el siguiente caso: un funcionario firma digitalmente una resolución en 2023 con un certificado aparentemente válido. En 2024, ese certificado es revocado porque su clave privada fue comprometida. Si hoy se intenta verificar esa firma a través de los canales oficiales disponibles al público, no hay manera de detectar la revocación. La firma aparenta ser válida; los registros de revocación no están disponibles.</p>
+<p>Este escenario no es hipotético. Afecta directamente la trazabilidad de actos administrativos, contratos y documentos con valor legal, y socava la confianza que el sistema de firma digital está precisamente diseñado para generar.</p>
+<h2 id="el-cumplimiento-formal-frente-al-cumplimiento-real">El cumplimiento formal frente al cumplimiento real.</h2>
+<p>El CRL sí se publica. Es descargable desde <a href="https://efirma.com.py/repositorio/efirma2.crl">https://efirma.com.py/repositorio/efirma2.crl</a>.</p>
+<p>El problema es que se trata de un <strong>archivo binario en formato DER</strong>, no legible directamente. Para interpretarlo se requiere una herramienta técnica como OpenSSL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ openssl crl -inform DER -text -noout -in efirma2.crl -out efirma2.txt
+</span></span></code></pre></div><p>Publicar un archivo de estas características y presentarlo como cumplimiento de la obligación de accesibilidad pública es satisfacer la forma de la norma mientras se vacía su contenido. La disposición legal no exige simplemente que exista un archivo; exige un servicio que cualquier persona pueda consultar. La diferencia es sustancial.</p>
+<p>Convertido a texto, el CRL presenta una estructura como la siguiente:</p>
+<pre tabindex="0"><code>Certificate Revocation List (CRL):
+        Version 2 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: serialNumber=RUC80080099-0, CN=VIT S.A., OU=Prestador Cualificado de Servicios de Confianza, O=ICPP, C=PY
+        Last Update: Sep 27 18:53:02 2025 GMT
+        Next Update: Sep 28 06:53:02 2025 GMT
+        CRL extensions:
+            X509v3 CRL Number: 
+                4100
+            X509v3 Authority Key Identifier: 
+                BB:65:11:2B:67:ED:86:38:20:1C:28:67:19:14:04:65:EA:91:A1:B3
+            X509v3 Issuing Distribution Point: critical
+                Full Name:
+                  URI:https://www.efirma.com.py/repositorio/efirma2.crl
+
+Revoked Certificates:
+    Serial Number: 3CD7DB14CF35364E64726D4AA5C64282
+        Revocation Date: Jun 19 19:25:45 2023 GMT
+        CRL entry extensions:
+            X509v3 CRL Reason Code: 
+                Unspecified
+</code></pre><p>La información contenida puede sintetizarse así:</p>
+<ol>
+<li><strong>Emisor del CRL</strong>: VIT S.A., identificada por su RUC, en su rol de autoridad certificadora.</li>
+<li><strong>Periodicidad de actualización</strong>: La lista fue actualizada el 27 de septiembre de 2025, con próxima actualización prevista para el día siguiente. Una ventana de doce horas representa un período concreto de exposición a información desactualizada.</li>
+<li><strong>Identificadores de integridad</strong>: El número de CRL y la clave de la autoridad permiten verificar que la lista no fue modificada desde su emisión.</li>
+<li><strong>Certificados revocados</strong>: Número de serie, fecha de revocación y, cuando se documenta, razón. En el ejemplo, la razón figura como <em>Unspecified</em>, lo que dificulta cualquier auditoría posterior sobre las circunstancias de la revocación.</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+Si un certificado ha expirado y no aparece en el CRL, ¿la firma es válida?
+No necesariamente. La validación de una firma digital requiere dos condiciones independientes: (1) el certificado debe estar dentro de su período de validez en el momento de la firma, y (2) el certificado no debe haber sido revocado. Para que la fecha de la firma sea verificable con certeza en el tiempo, las firmas deben incorporar un sello de tiempo (<em>timestamp</em>) criptográfico.</p>
+</blockquote>
+<h2 id="lo-que-debería-existir">Lo que debería existir.</h2>
+<p>La brecha entre el estado actual y el estándar exigible no responde a limitaciones técnicas. Las herramientas y protocolos necesarios están normalizados desde hace décadas. Es, en esencia, una cuestión de voluntad regulatoria y de exigencia efectiva de cumplimiento.</p>
+<p>Un servicio de consulta genuinamente accesible al público debería contemplar, como mínimo:</p>
+<ul>
+<li><strong>Un portal web</strong> donde cualquier persona pueda ingresar el número de serie de un certificado y obtener su estado: vigente, expirado o revocado, con fecha y razón de revocación cuando corresponda.</li>
+<li><strong>Un servicio OCSP público</strong>, consultable por software de verificación, conforme al RFC 6960.</li>
+<li><strong>Historial de revocaciones accesible</strong>, no solo el estado vigente. Un certificado revocado hace dos años sigue siendo relevante para auditar documentos firmados en ese período.</li>
+<li><strong>Razones de revocación documentadas</strong>. La distinción entre una revocación por expiración programada y una por compromiso de seguridad tiene implicancias legales completamente distintas.</li>
+</ul>
+<p>El marco normativo técnico existe: el RFC 5280 regula el estándar CRL <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>; el RFC 6960 define OCSP; el perfil X.509 establece la estructura de los certificados. Lo que falta es que el organismo regulador exija la implementación efectiva de estos estándares y que los PSCs rindan cuentas por el cumplimiento real —no meramente formal— de la obligación legal de accesibilidad.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Reglamento (UE) N.º 910/2014 del Parlamento Europeo y del Consejo, de 23 de julio de 2014, relativo a la identificación electrónica y los servicios de confianza para las transacciones electrónicas en el mercado interior (eIDAS).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Cooper, D. et al. (2008). <em>Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</em>. RFC 5280. IETF.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>ITU-T Recommendation X.509 (2019). <em>Information technology – Open Systems Interconnection – The Directory: Public-key and attribute certificate frameworks</em>. ITU.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Santesson, S. et al. (2013). <em>X.509 Internet Public Key Infrastructure Online Certificate Status Protocol – OCSP</em>. RFC 6960. IETF.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Cooper, D. et al. (2008). RFC 5280, op. cit.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    
+
+    
+    <div class="tags">
+        
+        
+        
+        <a class="link" href="http://localhost:1313/tags/detalle/">
+            <i class="fa fa-tag"></i> Detalle
+        </a>
+        
+        
+        
+        
+        <a class="link" href="http://localhost:1313/tags/servicios/">
+            <i class="fa fa-tag"></i> Servicios
+        </a>
+        
+        
+    </div>
+    
+
+
+    
+    <div class="author">
+        <a class="link" href="/author/idalina-insfr%C3%A1n">
+            <i class="fa fa-user"></i>
+            Idalina Insfrán
+        </a>
+    </div>
+    
+
+</div>
+
+    
+<div class="footer">
+<div class="categories">
+        <i class="fa fa-file-lines "></i>
+        <div class="links">
+            
+                
+                
+                
+                <a href="http://localhost:1313/categories/post/">Post</a>
+                
+                
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="date">
+        
+            <i class="fa fa-calendar-days"></i>
+            
+            <span class="text">2026-02-17</span>
+            
+        
+    </div>
+
+
+
+</div>
+
+</article>
+
+        
+    </div>
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Últimas publicaciones</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="http://localhost:1313/posts/servicios/">Peritaje Judicial en Informática</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://localhost:1313/posts/detalles/">Detalle de Servicios</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://localhost:1313/posts/crl-accesible/">CRL: ¿Accesible al público?</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://localhost:1313/posts/enfoque/">Enfoque</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://localhost:1313/posts/about/">About</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            
+            <a href="http://localhost:1313/categories/"><strong>Categorías</strong></a>
+            
+
+            <ul>
+                
+                <li>
+                
+                    <a href="http://localhost:1313/categories/p%C3%A1gina/">Página (3)</a>
+                
+                </li>
+                
+                <li>
+                
+                    <a href="http://localhost:1313/categories/page/">Page (2)</a>
+                
+                </li>
+                
+                <li>
+                
+                    <a href="http://localhost:1313/categories/about/">About (1)</a>
+                
+                </li>
+                
+                <li>
+                
+                    <a href="http://localhost:1313/categories/post/">Post (1)</a>
+                
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <strong></strong>
+
+            <ul>
+                
+                <li>
+                    <a href="https://apps.garmin.com/developer/763f08dc-2be1-402f-b9b3-f3861b4df947/apps">Garmin Apps</a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/mirmousaviii/mostafa-hugo-theme">Github.com</a>
+                </li>
+                
+                <li>
+                    <a href="https://mirmousavi.com/">mirmousavi.com</a>
+                </li>
+                
+            </ul>
+            
+
+
+
+            
+            <div class="archive">
+                
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="http://localhost:1313/">
+                &copy;
+                
+                2024 - 2026
+                
+                by idsfran.github.io
+            </a>
+            -
+            <a href="http://localhost:1313/posts/crl-accesible/index.xml">RSS</a>
+        </div>
+        <div class="author">
+            <a href="https://github.com/mirmousaviii/mostafa-hugo-theme"
+                target="_blank">Powered by Mostafa-Hugo-Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script src="http://localhost:1313/theme.js"></script>
+
+
+
+    
+
+
+
+    
+
+    
+</body>
+
+</html>

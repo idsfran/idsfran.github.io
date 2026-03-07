@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trust on idsfran.github.io</title>
+    <link>http://localhost:1313/tags/trust/</link>
+    <description>Recent content in Trust on idsfran.github.io</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 18 Feb 2026 13:16:19 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/trust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forensics and Trust</title>
+      <link>http://localhost:1313/en/servicios/</link>
+      <pubDate>Wed, 18 Feb 2026 13:16:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/servicios/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Digital Forensics and Trust Services&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Professional &lt;strong&gt;expert witness services in computer science and IT&lt;/strong&gt;, with advanced specialization in &lt;strong&gt;digital evidence analysis&lt;/strong&gt;, &lt;strong&gt;Public Key Infrastructure (PKI)&lt;/strong&gt;, &lt;strong&gt;advanced electronic signature systems&lt;/strong&gt;, and the full range of &lt;strong&gt;Trust Services&lt;/strong&gt; governed by regulations such as eIDAS (Regulation (EU) No 910/2014) and complementary national legislation.&lt;/p&gt;&#xA;&lt;p&gt;My expert witness work is designed to deliver &lt;strong&gt;objective, rigorous technical clarity&lt;/strong&gt; in judicial proceedings (civil, criminal, commercial, labor, or administrative) where cryptographic technologies play a key role, including qualified digital certificates, timestamps, strong authentication systems (including biometrics and multi-factor), certified electronic communications, log records, IP addresses, metadata, storage devices, cloud environments, and networks in general.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paginas on idsfran.github.io</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Paginas on idsfran.github.io</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 18 Feb 2026 13:10:19 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peritaje Judicial en Informática</title>
+      <link>http://localhost:1313/post/servicios/</link>
+      <pubDate>Wed, 18 Feb 2026 13:10:19 +0200</pubDate>
+      <guid>http://localhost:1313/post/servicios/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Forensia Digital y Servicios de Confianza&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ofrezco servicios profesionales de &lt;strong&gt;peritaje judicial en materia de informática&lt;/strong&gt;, con especialización avanzada en &lt;strong&gt;análisis de evidencia digital&lt;/strong&gt;, &lt;strong&gt;infraestructura de clave pública (PKI)&lt;/strong&gt;, &lt;strong&gt;sistemas de firma electrónica avanzada&lt;/strong&gt; y el conjunto de &lt;strong&gt;Servicios de Confianza&lt;/strong&gt; regulados por normativas como eIDAS (Reglamento UE 910/2014) y legislación nacional complementaria.&lt;/p&gt;&#xA;&lt;p&gt;El trabajo pericial se diseña para &lt;strong&gt;aportarle claridad técnica objetiva y rigurosa&lt;/strong&gt; en procedimientos judiciales (civiles, penales, mercantiles, laborales o contencioso-administrativos) donde resultan relevantes tecnologías criptográficas, certificados digitales cualificados, sellos de tiempo, sistemas de autenticación fuerte (incluyendo biometría y multifactor), comunicaciones electrónicas certificadas, registros de logs, direcciones IP, metadatos, dispositivos de almacenamiento, entornos cloud y redes en general.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

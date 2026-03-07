@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page on idsfran.github.io</title>
+    <link>http://localhost:1313/en/categories/page/</link>
+    <description>Recent content in Page on idsfran.github.io</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Feb 2026 13:16:19 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/categories/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forensics and Trust</title>
+      <link>http://localhost:1313/en/en/servicios/</link>
+      <pubDate>Wed, 18 Feb 2026 13:16:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/en/servicios/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Digital Forensics and Trust Services&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Professional &lt;strong&gt;expert witness services in computer science and IT&lt;/strong&gt;, with advanced specialization in &lt;strong&gt;digital evidence analysis&lt;/strong&gt;, &lt;strong&gt;Public Key Infrastructure (PKI)&lt;/strong&gt;, &lt;strong&gt;advanced electronic signature systems&lt;/strong&gt;, and the full range of &lt;strong&gt;Trust Services&lt;/strong&gt; governed by regulations such as eIDAS (Regulation (EU) No 910/2014) and complementary national legislation.&lt;/p&gt;&#xA;&lt;p&gt;My expert witness work is designed to deliver &lt;strong&gt;objective, rigorous technical clarity&lt;/strong&gt; in judicial proceedings (civil, criminal, commercial, labor, or administrative) where cryptographic technologies play a key role, including qualified digital certificates, timestamps, strong authentication systems (including biometrics and multi-factor), certified electronic communications, log records, IP addresses, metadata, storage devices, cloud environments, and networks in general.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enfoque</title>
+      <link>http://localhost:1313/en/en/enfoque/</link>
+      <pubDate>Thu, 25 Jul 2024 13:16:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/en/enfoque/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Expert Assessment Approach&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The expert assessment is conducted under strict criteria of:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Absolute technical rigor&lt;/strong&gt;: Application of internationally validated forensic methodologies, using updated tools and protocols to ensure the precision and reproducibility of each analysis.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Maximum expository clarity&lt;/strong&gt;: Reports are drafted in precise yet accessible language for the judicial sphere, avoiding unnecessary jargon without sacrificing technical detail, to facilitate understanding and evidentiary evaluation by judges, prosecutors, attorneys, and party-appointed experts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Detalle de Servicios</title>
+      <link>http://localhost:1313/en/en/detalles/</link>
+      <pubDate>Tue, 17 Feb 2026 13:20:19 +0200</pubDate>
+      <guid>http://localhost:1313/en/en/detalles/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Services&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Preparation of expert witness reports&lt;/strong&gt;&lt;br&gt;&#xA;Drafting of comprehensive, detailed, and court-ratifiable expert reports. These include thorough technical analysis, reconstruction of digital events, well-founded conclusions supported by verifiable evidence (hashes, bit-for-bit forensic images, audited logs, etc.), and a balanced technical-legal language that facilitates understanding and evidentiary assessment by judges, prosecutors, and attorneys. Reports are prepared for oral ratification in hearings if required.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Technical analysis of digital documentation&lt;/strong&gt;&lt;br&gt;&#xA;In-depth examination of electronic documents, emails, contracts, invoices, chats, attachments, and any relevant digital media. Verification of authenticity, integrity, effective date/time (via metadata and reliable trusted timestamps), origin, potential manipulations or alterations, and consistency with the evidentiary context of the proceedings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
