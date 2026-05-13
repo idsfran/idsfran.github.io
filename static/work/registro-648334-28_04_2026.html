@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ministerio de Educación y Ciencias - Paraguay</title>
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyBBJHLPOfOs0NNYzxtfeRcmWSO-3a7P_EU"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/datos/assets/favicon-886b4d4314568ef68551685d1588aa73.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/datos/assets/application-24fd84bd9875a38fb9e23e2f30d0a1d3.css" media="all" rel="stylesheet" />
+    <script src="/datos/assets/application-1a9100dbcad0536024005377841a2bb6.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="K8qg9EfkGXweilO928DwKzEuUS0nMqjskPBdhkjQtZo=" name="csrf-token" />
+  </head>
+
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-52762572-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <body>
+
+    <div id="main_container">
+
+      <div id="header">
+        <header class="container-fluid">
+
+  <div class="cabecera row hidden-xs">
+
+    <div class="col-sm-3 col-xs-8 principal" onclick="Javascript:window.open('https://mec.gov.py', '_self');">
+      <img alt="Actual mec" src="/datos/assets/logo_oficial/actual_mec-7b13cfa6cbaa7788a106af3ee0bfc164.png" />
+    </div>
+
+    <div class="col-sm-offset-1 col-sm-4 logo datos-abiertos">
+    </div>
+
+    <div class="col-sm-offset-1 col-sm-3 ">
+      <img alt="Actual gobierno" src="/datos/assets/logo_oficial/actual_gobierno-1cf0645a82d933ef40323eb0a1578687.png" />
+    </div>
+
+  </div>
+
+  <!-- Navigation -->
+<nav class="navbar-principal">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-lg fa-bars"></span>
+      </button>
+      <a class="navbar-brand" href="https://datos.mec.gov.py/index" id="tab-datosabiertos" title="Ir al Inicio">Datos Abiertos</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="https://mec.gov.py" id="tab-portalmec" target="_blank" title="Ir al Portal del MEC">Portal MEC</a></li>
+        <li><a href="https://datos.mec.gov.py/data" id="tab-listadatos" title="Ir a Datos">Lista de Datos</a></li>
+        <li><a href="https://datos.mec.gov.py/data/visualizaciones" id="tab-visualizaciones" title="Ir a Visualizaciones">Visualizaciones</a></li>
+        <li class="dropdown">
+        
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Aplicaciones <span class="caret"></span></a>
+          <ul class='dropdown-menu' role='menu'>
+            <li><a href="http://fonacide.mec.gov.py/contralorfonacide" target="_blank">Contralor de FONACIDE</a></li>
+          </ul>
+        
+        </li>
+        <li><a href="https://datos.mec.gov.py/app/mapa_establecimientos" id="tab-mapaestablecimientos" title="Ir al Mapa de Establecimientos">Mapa</a></li>
+        <li><a href="https://datos.mec.gov.py/contactos" id="tab-participa" title="Ir al Formulario de Contactos">Participa</a></li>
+        <li><a href="https://datos.mec.gov.py/about" id="tab-acercade" title="Ir al Acerca de">Acerca de</a></li>
+        <li><a href="https://datos.mec.gov.py/legal" id="tab-avisolegal" title="Ir al Aviso Legal">Aviso legal</a></li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>-->
+      </ul>
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <div class="links-sociales" id="tab-redessociales">
+          </div>
+        </li>
+        <li id="compartir" class="hidden-xs">
+        </li>
+      </ul>
+      -->
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
+
+
+</header>
+      </div>
+
+      <div class="caja container-fluid" id="main_content">
+
+        <script src="/datos/assets/views/uri_registro_egresados_view.js?body=1"></script>
+
+<div>
+
+  <h1>
+    <span itemprop="name">Perfil Academico</span>
+    <meta itemprop="description"
+          content="Contiene información sobre la ubicación geográfica de los establecimientos escolares tales como el departamento, distrito,barrio/localidad donde se encuentran asentados, además de la zona (urbana o rural) a la cual pertenecen, y los datos georreferenciadas como las coordenadas planas (en metros) y geograficas. El Sistema de informacion de Estadística Continua (SIEC) considera “Establecimiento Escolar” a la construcción que existe dentro de un predio (terreno) que se emplea para la enseñanza, donde puede funcionar una o más instituciones educativas con sus respectivos niveles/modalidades de educación."/>
+    <meta itemprop="temporal" style="display: none;" content="2012-01-01/2012-12-31">
+    <meta itemprop="url" content="https://datos.mec.gov.py/data/establecimientos">  
+    <span itemprop="provider" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+      <meta itemprop="name" content="Ministerio de Educación y Cultura">
+      <meta itemprop="url" content="https://mec.gov.py/">
+      <meta itemprop="email" content="datosabiertos@mec.gov.py">
+    </span>
+    <span itemprop="creator" itemscope itemtype="https://schema.org/Person" style="display: none;">
+      <meta itemprop="name" content="Juan Barrios">
+      <meta itemprop="email" content="datosabiertos@mec.gov.py">
+    </span>
+    <meta itemprop="license" style="display: none;" content="https://creativecommons.org/licenses/by/4.0/legalcode"/>
+    <meta itemprop="keywords" style="display: none;" content="educación,establecimientos,escolar,geografico"/>
+    <meta itemprop="version" style="display: none;" content="1.0"/>
+  </h1>
+
+</div>
+<br>
+
+
+  <div class="row">
+    
+    <div class="col-sm-12">
+     
+     <h2>IDALINA INSFRAN ADORNO</h2>
+      
+      <ul class="listado">
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Nro de Documento de Identidad</strong></div>
+          <div class="celda col-sm-8">5252964</div>
+        </li>
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Tipo de documento de identidad</strong></div>
+          <div class="celda col-sm-8">Cédula de Identidad</div>
+        </li>
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Nacionalidad</strong></div>
+          <div class="celda col-sm-8">Paraguaya</div>
+        </li>
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Título obtenido</strong></div>
+          <div class="celda col-sm-8">LICENCIADO/A</div>
+        </li>
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Denominación de la carrera</strong></div>
+          <div class="celda col-sm-8">ANÁLISIS DE SISTEMAS INFORMÁTICOS</div>
+        </li>
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Denominación del énfasis</strong></div>
+          <div class="celda col-sm-8"></div>
+        </li>
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Nivel de Titulación</strong></div>
+          <div class="celda col-sm-8">Educación de Grado</div>
+        </li>
+
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Clasificación CINE/F - Campo Amplio</strong></div>
+          <div class="celda col-sm-8">Tecnologías de la información y la comunicación (TIC)</div>
+        </li>
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Institución</strong></div>
+          <div class="celda col-sm-8">UNIVERSIDAD TECNOLÓGICA INTERCONTINENTAL</div>
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Tipo de institución</strong></div>
+          <div class="celda col-sm-8">Universidad</div>
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Departamento</strong></div>
+          <div class="celda col-sm-8">Capital</div>
+        </li>
+        
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Distrito</strong></div>
+          <div class="celda col-sm-8">Asunción</div>
+        </li>
+        
+        
+        <li class="row">
+          <h4>Acto administrativo de Registro del título</h4>
+          
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Fecha:</strong></div>
+          <div class="celda col-sm-8">2025-07-04</div>
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>N&uacute;mero:</strong></div>
+          <div class="celda col-sm-8"><a  style="color:#0000ff;font-weight:bold; " href="http://intramec.mec.gov.py/sies//system/documentos_resoluciones/datas/000/235/010/original/resolucion-132730-firmado.pdf">105057</a></div>
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Tipo:</strong></div>
+          <div class="celda col-sm-8">Resoluci&oacute;n</div>
+        </li>
+        
+        <li class="row">
+          <div class="celda col-sm-4"><strong>Responsable:</strong></div>
+          <div class="celda col-sm-8">Direcci&oacute;n de Registro de T&iacute;tulo</div>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+
+
+<style>
+  div.first{
+    border-top:solid 1px silver;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright:21px;
+    -moz-border-radius-bottomleft:0px;
+    -moz-border-radius-bottomright:0px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-top-right-radius:21px;
+    -webkit-border-bottom-left-radius:0px;
+    -webkit-border-bottom-right-radius:0px;
+    border-top-left-radius:0px;
+    border-top-right-radius:21px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+  }
+
+  div.last{
+    border-bottom:solid 1px silver;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright:0px;
+    -moz-border-radius-bottomleft:0px;
+    -moz-border-radius-bottomright:21px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-top-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -webkit-border-bottom-right-radius:21px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:21px;
+  } 
+
+</style>
+
+      </div>
+
+      <div id="footer">
+        <footer class="footer">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-7 col-sm-offset-1">
+      <p class="text-center">
+        <a href="https://datos.mec.gov.py/legal" target="_blank">Aviso Legal</a> | <a href="https://datos.mec.gov.py/about" target="_blank">Acerca de</a>
+        </br>
+
+          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+
+        2026 - Portal construido y mantenido por el <a href="https://mec.gov.py" target="_blank">MEC</a>
+        <br>
+
+        con el apoyo del <a href="https://www.cemaso.org.py/es/proyectos/20-programa-de-democracia-y-gobernabilidad " target="_blank">Programa de Democracia y Gobernabilidad (USAID-CEAMSO)</a>
+        <br/>
+        Dirección: 15 de Agosto entre Gral. Diaz y E.V. Haedo Edificio Ramón Indalecio Cardozo<br />
+        Teléfono: (595 21) 452-440 / 444-493<br />
+        Línea Gratuita: 0800 - 11 4975<br />
+        Asunción Paraguay
+      </p>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+</footer>
+
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
