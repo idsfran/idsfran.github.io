@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle de Servicios — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/en/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/en/">Services</a>
+      <a href="/en/enfoque/">Approach</a>
+      <a href="/en/detalles/" aria-current="page">Details</a>
+      <a href="/en/about/">About</a>
+    </nav>
+    <div class="opciones">
+      <a href="/es/detalles/" lang="es" hreflang="es">Español</a>
+      <button id="tema" type="button" data-oscuro="Dark mode" data-claro="Light mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Detalle de Servicios</h1>
+      
+<p><strong>Services</strong></p>
+<ul>
+<li>
+<p><strong>Preparation of expert witness reports</strong><br>
+Drafting of comprehensive, detailed, and court-ratifiable expert reports. These include thorough technical analysis, reconstruction of digital events, well-founded conclusions supported by verifiable evidence (hashes, bit-for-bit forensic images, audited logs, etc.), and a balanced technical-legal language that facilitates understanding and evidentiary assessment by judges, prosecutors, and attorneys. Reports are prepared for oral ratification in hearings if required.</p>
+</li>
+<li>
+<p><strong>Technical analysis of digital documentation</strong><br>
+In-depth examination of electronic documents, emails, contracts, invoices, chats, attachments, and any relevant digital media. Verification of authenticity, integrity, effective date/time (via metadata and reliable trusted timestamps), origin, potential manipulations or alterations, and consistency with the evidentiary context of the proceedings.</p>
+</li>
+<li>
+<p><strong>Technical assistance to law firms</strong><br>
+Specialized support to attorneys, solicitors, and legal practices throughout all stages of the process: from initial assessment of available digital evidence, design of strategies for evidence collection and preservation, preparation of procedural documents (requests for expert evidence, challenges, etc.), to technical accompaniment in preparatory meetings, interrogations, or hearings. Confidential and strategic advice to maximize the probative impact of electronic evidence.</p>
+</li>
+<li>
+<p><strong>Technical evaluation of digital signature validity</strong><br>
+Detailed analysis of electronic signatures (simple, advanced, and qualified), associated digital certificates, signature creation devices, timestamps, PKI trust hierarchies, revocation status (CRL/OCSP), compliance with eIDAS standards (including updates under Regulation (EU) 2024/1183 – eIDAS 2.0), and determination of their legal effectiveness and non-repudiation in the specific context of the dispute or transaction.</p>
+</li>
+<li>
+<p><strong>Participation in hearings and ratification of reports</strong><br>
+Appearance as a court-appointed expert in trials, hearings, or preliminary proceedings to present, defend, and ratify the issued reports. Clear and pedagogical explanation of technical findings before the court, responses to questions from the parties, cross-examination, and clarification of technical issues, always ensuring neutrality, accuracy, and respect for the principle of adversarial proceedings.</p>
+</li>
+</ul>
+<p>These services are provided on an integrated or modular basis, according to the specific needs of the case, with full guarantees of confidentiality, independence, and adherence to the highest ethical and technical standards in judicial computer forensics expertise.</p>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

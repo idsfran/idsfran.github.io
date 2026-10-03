@@ -1,5 +1,6 @@
 ---
 title: "Peritaje Judicial en Informática"
+nav: "Servicios"
 date: 2026-02-18T13:10:19+02:00
 tags: ["pericia", "descripción"]
 categories: ["pagina"]

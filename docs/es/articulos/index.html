@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artículos — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/es/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/es/">Servicios</a>
+      <a href="/es/enfoque/">Enfoque</a>
+      <a href="/es/detalles/">Detalle</a>
+      <a href="/es/articulos/" aria-current="page">Artículos</a>
+    </nav>
+    <div class="opciones">
+      <a href="/en/" lang="en" hreflang="en">English</a>
+      <button id="tema" type="button" data-oscuro="Modo oscuro" data-claro="Modo claro">Modo oscuro</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <h1>Artículos</h1>
+    <ul class="indice">
+      <li><a href="/es/crl-accesible/">CRL: ¿Accesible al público?</a> <time datetime="2026-02-17">17 de febrero de 2026</time></li>
+    </ul>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

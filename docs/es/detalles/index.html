@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle de Servicios — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/es/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/es/">Servicios</a>
+      <a href="/es/enfoque/">Enfoque</a>
+      <a href="/es/detalles/" aria-current="page">Detalle</a>
+      <a href="/es/articulos/">Artículos</a>
+    </nav>
+    <div class="opciones">
+      <a href="/en/detalles/" lang="en" hreflang="en">English</a>
+      <button id="tema" type="button" data-oscuro="Modo oscuro" data-claro="Modo claro">Modo oscuro</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Detalle de Servicios</h1>
+      
+<p><strong>Servicios</strong></p>
+<ul>
+<li>
+<p><strong>Elaboración de informes periciales</strong><br>
+Redacción de informes periciales completos, detallados y ratificables en sede judicial. Incluyen análisis técnico exhaustivo, reconstrucción de hechos digitales, conclusiones fundamentadas con evidencias verificables (hashes, imágenes forenses, logs auditados, etc.), y lenguaje técnico-jurídico equilibrado que facilita su comprensión y valoración por jueces, fiscales y letrados. Preparados para ratificación oral en audiencia si es requerido.</p>
+</li>
+<li>
+<p><strong>Análisis técnico de documentación digital</strong><br>
+Examen minucioso de documentos electrónicos, correos, contratos, facturas, chats, archivos adjuntos y cualquier soporte digital relevante. Verificación de autenticidad, integridad, fecha/hora efectiva (mediante metadatos y sellos temporales confiables), origen, posibles manipulaciones o alteraciones, y coherencia con el contexto probatorio del procedimiento.</p>
+</li>
+<li>
+<p><strong>Asistencia técnica a estudios jurídicos</strong><br>
+Apoyo especializado a abogados, procuradores y despachos durante todas las fases del proceso: desde la valoración inicial de la prueba digital disponible, diseño de estrategias de obtención y preservación de evidencia, preparación de escritos (solicitudes de prueba pericial, impugnaciones, etc.), hasta acompañamiento técnico en reuniones preparatorias, interrogatorios o vistas. Asesoramiento confidencial y estratégico para maximizar el impacto probatorio de la evidencia electrónica.</p>
+</li>
+<li>
+<p><strong>Evaluación de validez técnica de firmas digitales</strong><br>
+Análisis detallado de firmas electrónicas (simples, avanzadas y cualificadas), certificados digitales asociados, dispositivos de creación de firma, sellos de tiempo, jerarquías de confianza PKI, estado de revocación (CRL/OCSP), cumplimiento de estándares eIDAS (incluyendo actualizaciones del Reglamento (UE) 2024/1183 – eIDAS 2.0), y determinación de su eficacia jurídica y no repudio en el contexto concreto del litigio o transacción.</p>
+</li>
+<li>
+<p><strong>Participación en audiencias y ratificación de informes</strong><br>
+Comparecencia como perito judicial en vistas, juicios o audiencias preliminares para exponer, defender y ratificar los informes emitidos. Explicación clara y didáctica de los hallazgos técnicos ante el tribunal, respuesta a preguntas de las partes, contrainterrogatorios y aclaración de dudas técnicas, garantizando siempre neutralidad, precisión y respeto al principio de contradicción.</p>
+</li>
+</ul>
+<p>Estos servicios se prestan de forma integral o modular, según las necesidades del caso, con plena garantía de confidencialidad, independencia y adhesión a los más altos estándares éticos y técnicos de la pericia judicial en informática forense.</p>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

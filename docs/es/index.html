@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peritaje Judicial en Informática — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/es/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/es/" aria-current="page">Servicios</a>
+      <a href="/es/enfoque/">Enfoque</a>
+      <a href="/es/detalles/">Detalle</a>
+      <a href="/es/articulos/">Artículos</a>
+    </nav>
+    <div class="opciones">
+      <a href="/en/" lang="en" hreflang="en">English</a>
+      <button id="tema" type="button" data-oscuro="Modo oscuro" data-claro="Modo claro">Modo oscuro</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Peritaje Judicial en Informática</h1>
+      
+<p><strong>Forensia Digital y Servicios de Confianza</strong></p>
+<p>Ofrezco servicios profesionales de <strong>peritaje judicial en materia de informática</strong>, con especialización avanzada en <strong>análisis de evidencia digital</strong>, <strong>infraestructura de clave pública (PKI)</strong>, <strong>sistemas de firma electrónica avanzada</strong> y el conjunto de <strong>Servicios de Confianza</strong> regulados por normativas como eIDAS (Reglamento UE 910/2014) y legislación nacional complementaria.</p>
+<p>El trabajo pericial se diseña para <strong>aportarle claridad técnica objetiva y rigurosa</strong> en procedimientos judiciales (civiles, penales, mercantiles, laborales o contencioso-administrativos) donde resultan relevantes tecnologías criptográficas, certificados digitales cualificados, sellos de tiempo, sistemas de autenticación fuerte (incluyendo biometría y multifactor), comunicaciones electrónicas certificadas, registros de logs, direcciones IP, metadatos, dispositivos de almacenamiento, entornos cloud y redes en general.</p>
+<h3>Principales ámbitos de actuación</h3>
+<ul>
+<li>
+<p>Verificación de <strong>autenticidad, integridad y no repudio</strong> de documentos electrónicos firmados digitalmente (firma electrónica simple, avanzada y cualificada).</p>
+</li>
+<li>
+<p>Análisis forense de <strong>evidencia digital</strong> en ordenadores, móviles, tablets, servidores, discos duros, pendrives, tarjetas de memoria, sistemas de mensajería (WhatsApp, email, Telegram, Signal, etc.), redes sociales y plataformas colaborativas.</p>
+</li>
+<li>
+<p>Determinación de la <strong>fecha y hora real</strong> de creación, modificación o envío de archivos y mensajes mediante análisis de metadatos y sellos temporales confiables.</p>
+</li>
+<li>
+<p>Investigación de <strong>incidentes de seguridad</strong> con relevancia judicial: accesos no autorizados, intrusiones, malware, phishing, suplantación de identidad digital, fuga o robo de información confidencial, alteración de pruebas electrónicas.</p>
+</li>
+<li>
+<p>Reconstrucción cronológica y técnica de <strong>hechos digitales</strong> (quién hizo qué, cuándo, desde dónde y con qué medios).</p>
+</li>
+<li>
+<p>Auditoría y peritaje de <strong>sistemas PKI empresariales o de Administración Pública</strong>: validez de certificados, revocación, jerarquías de confianza, cumplimiento de estándares.</p>
+</li>
+<li>
+<p>Valoración de la <strong>cadena de custodia</strong> de evidencias digitales desde su recolección hasta su presentación en juicio (hashing SHA-2/SHA-3, imágenes forenses bit a bit, bloqueo de escritura, documentación cronológica).</p>
+</li>
+<li>
+<p>Elaboración de <strong>informes periciales detallados</strong>, ratificables en juicio, con lenguaje técnico accesible para operadores jurídicos y conclusiones fundamentadas.</p>
+</li>
+<li>
+<p>Contraperitajes y valoración crítica de informes periciales ajenos.</p>
+</li>
+<li>
+<p>Asesoramiento técnico previo o durante el proceso a letrados y procuradores en estrategias relacionadas con prueba digital.</p>
+</li>
+</ul>
+<p>Todos los procedimientos siguen estándares internacionalmente aceptados de <strong>informática forense</strong> (ISO/IEC 27037, 27042, NIST SP-800-86, directrices UNE, buenas prácticas de cadena de custodia) para garantizar que las evidencias sean <strong>admisibles, auténticas, completas, confiables y creíbles</strong> ante cualquier tribunal.</p>
+<hr>
+<h2>Enfoque</h2>
+<p>El peritaje se realiza con criterios de:</p>
+<ul>
+<li>Rigor técnico</li>
+<li>Claridad expositiva</li>
+<li>Neutralidad e independencia</li>
+<li>Adecuación al marco normativo vigente en materia de Servicios de Confianza</li>
+</ul>
+<p>Los informes están redactados en lenguaje comprensible para el ámbito judicial, sin perder precisión técnica, facilitando su valoración probatoria.</p>
+<hr>
+<h2>Servicios</h2>
+<ul>
+<li>Elaboración de informes periciales</li>
+<li>Análisis técnico de documentación digital</li>
+<li>Asistencia técnica a estudios jurídicos</li>
+<li>Evaluación de validez técnica de firmas digitales</li>
+<li>Participación en audiencias y ratificación de informes</li>
+</ul>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

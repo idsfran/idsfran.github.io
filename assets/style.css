@@ -1,0 +1,382 @@
+/* ───────── Tipografía (la que se elige en build.js → SITE.fuente) ───────── */
+
+@font-face {
+  font-family: 'Texto';
+  src: url(fonts/texto-normal.woff2) format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Texto';
+  src: url(fonts/texto-italic.woff2) format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ───────── Colores ─────────
+   Neutros con un leve tinte azul, y un único acento (--acento) para
+   marca, enlaces, menú activo, citas y viñetas. */
+
+:root {
+  --fondo: #f7f9fb;
+  --texto: #1b2129;
+  --tenue: #5f6b79;
+  --linea: #d9e0e8;
+  --acento: #1f5c99;
+  color-scheme: light;
+}
+
+/* Si el sistema está en oscuro y no hay elección manual de "claro" */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --fondo: #111720;
+    --texto: #e3e8ee;
+    --tenue: #93a0b0;
+    --linea: #2a3441;
+    --acento: #7fb2e8;
+    color-scheme: dark;
+  }
+}
+
+/* Elección manual de oscuro */
+:root[data-theme='dark'] {
+  --fondo: #111720;
+  --texto: #e3e8ee;
+  --tenue: #93a0b0;
+  --linea: #2a3441;
+  --acento: #7fb2e8;
+  color-scheme: dark;
+}
+
+/* ───────── Base ───────── */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Texto', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.7;
+  background: var(--fondo);
+  color: var(--texto);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.columna {
+  width: 100%;
+  max-width: 41rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+main {
+  flex: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+/* ───────── Cabecera y menú ───────── */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.9rem;
+}
+
+.marca {
+  font-weight: 650;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--acento);
+}
+
+/* Primera línea: marca a la izquierda, idioma y modo a la derecha. Segunda: el menú. */
+nav {
+  order: 3;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.3rem;
+  margin-top: 0.5rem;
+}
+
+nav a,
+.opciones a,
+.opciones button {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--tenue);
+}
+
+nav a:hover,
+.opciones a:hover,
+.opciones button:hover {
+  color: var(--acento);
+}
+
+nav a[aria-current='page'] {
+  color: var(--acento);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
+.opciones {
+  display: flex;
+  gap: 1.1rem;
+  align-items: baseline;
+  margin-left: auto;
+}
+
+.opciones button {
+  font: inherit;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ───────── Texto ───────── */
+
+h1,
+h2,
+h3 {
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin: 0 0 1.6rem;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 2.6rem 0 0.8rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.6rem;
+}
+
+p {
+  margin: 0 0 1.1em;
+  text-wrap: pretty;
+  hyphens: auto;
+  hanging-punctuation: first;
+}
+
+strong {
+  font-weight: 650;
+}
+
+a {
+  color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, var(--acento) 45%, transparent);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+}
+
+.fecha {
+  margin: -1rem 0 2rem;
+  color: var(--tenue);
+  font-size: 0.9rem;
+}
+
+/* ───────── Listas, citas, código, tablas ───────── */
+
+ul,
+ol {
+  padding-left: 1.3em;
+  margin: 0 0 1.3em;
+}
+
+li {
+  margin-bottom: 0.7em;
+  text-wrap: pretty;
+}
+
+li::marker {
+  color: var(--acento);
+}
+
+li > p {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  margin: 1.6em 0;
+  padding-left: 1.1em;
+  border-left: 3px solid var(--acento);
+  font-style: italic;
+  color: var(--texto);
+}
+
+blockquote p {
+  margin-bottom: 0.5em;
+}
+
+code,
+pre {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-size: 0.82em;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1em 1.1em;
+  margin: 1.5em 0;
+  border: 1px solid var(--linea);
+  border-radius: 2px;
+  line-height: 1.5;
+}
+
+pre code {
+  font-size: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.45em 0.8em 0.45em 0;
+  border-bottom: 1px solid var(--linea);
+  vertical-align: top;
+}
+
+th {
+  font-weight: 650;
+  color: var(--acento);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--linea);
+  margin: 2.5em 0;
+}
+
+/* ───────── Índice de artículos ───────── */
+
+.indice {
+  list-style: none;
+  padding: 0;
+}
+
+.indice li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1.5rem;
+  margin-bottom: 0.9em;
+}
+
+.indice time {
+  color: var(--tenue);
+  font-size: 0.9rem;
+}
+
+/* ───────── Notas al pie ───────── */
+
+.footnotes {
+  font-size: 0.88rem;
+  color: var(--tenue);
+  margin-top: 3rem;
+}
+
+.footnotes-sep {
+  border: 0;
+  border-top: 1px solid var(--linea);
+  width: 4rem;
+  margin: 3rem 0 0;
+}
+
+.footnotes ol {
+  padding-left: 1.4em;
+}
+
+.footnotes li {
+  margin-bottom: 0.5em;
+}
+
+.footnotes p {
+  margin: 0;
+}
+
+.footnote-ref a,
+.footnote-backref {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+/* ───────── Pie ───────── */
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--linea);
+  color: var(--tenue);
+  font-size: 0.85rem;
+}
+
+/* ───────── Impresión: siempre claro y sin cabecera ───────── */
+
+@media print {
+  html {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  header,
+  footer {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}

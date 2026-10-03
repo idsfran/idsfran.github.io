@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRL: ¿Accesible al público? — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/es/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/es/">Servicios</a>
+      <a href="/es/enfoque/">Enfoque</a>
+      <a href="/es/detalles/">Detalle</a>
+      <a href="/es/articulos/">Artículos</a>
+    </nav>
+    <div class="opciones">
+      <a href="/en/" lang="en" hreflang="en">English</a>
+      <button id="tema" type="button" data-oscuro="Modo oscuro" data-claro="Modo claro">Modo oscuro</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>CRL: ¿Accesible al público?</h1>
+      <p class="fecha"><time datetime="2026-02-17">17 de febrero de 2026</time></p>
+<p>Este artículo examina el papel de las Listas de Revocación de Certificados (CRL, por sus siglas en inglés) y por qué su publicación, aunque obligatoria, no siempre equivale a un servicio accesible y práctico para el público general. La distinción no es menor: de ella depende la posibilidad real de verificar la validez de documentos firmados digitalmente.</p>
+<h2>Lo que dice la ley.</h2>
+<p>La norma vigente establece con precisión:</p>
+<blockquote>
+<ol start="2">
+<li>Los prestadores de servicios de confianza que expidan certificados electrónicos, deben cumplir también las siguientes obligaciones:
+a) No almacenar ni copiar, …
+(…)
+b) Disponer de un servicio de consulta sobre el estado de validez y revocación de los certificados emitidos accesible al público.</li>
+</ol>
+</blockquote>
+<p>El término determinante es <strong>accesible</strong>. La disposición no exige la mera publicación de un archivo técnico, sino la habilitación de un <em>servicio de consulta</em> que cualquier persona pueda utilizar sin conocimientos especializados. Esta distinción es la que, en la práctica, se ignora con mayor frecuencia.</p>
+<p>La legislación local se inscribe en una tendencia internacional cuyo referente más consolidado es el <strong>Reglamento eIDAS</strong> de la Unión Europea (Reglamento UE 910/2014), que regula los servicios de confianza electrónica y establece estándares de supervisión y accesibilidad equivalentes <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. La premisa de fondo es uniforme: la confianza en los documentos electrónicos exige que cualquier parte interesada —no solo los técnicos— pueda verificar la validez de una firma.</p>
+<h2>Un poco de contexto: qué es un certificado digital y por qué puede revocarse.</h2>
+<p>Una firma digital no es una imagen ni un trazo escaneado. Es el resultado de una operación criptográfica que involucra un <strong>certificado digital</strong>: un archivo emitido por una autoridad certificadora —el Prestador de Servicios de Confianza, o PSC— que vincula la identidad del firmante con una clave criptográfica única.</p>
+<p>Como un documento de identidad, ese certificado tiene fecha de vencimiento. Pero también puede <strong>revocarse antes de su expiración</strong> por razones contempladas en los estándares de Infraestructura de Clave Pública (PKI, <em>Public Key Infrastructure</em>) <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>:</p>
+<ul>
+<li><strong>Compromiso de la clave privada</strong>: acceso no autorizado a la clave del titular.</li>
+<li><strong>Cambio de afiliación</strong>: el titular deja una organización y su certificado pierde vigencia institucional.</li>
+<li><strong>Error en la emisión</strong>: el PSC cometió un error al emitirlo.</li>
+<li><strong>Solicitud del titular</strong>: el propio firmante solicita su cancelación.</li>
+</ul>
+<p>Cuando un certificado es revocado, el PSC tiene la obligación de publicar esa información. De no hacerlo —o de hacerlo de forma inaccesible—, quien recibe un documento firmado con ese certificado no tiene manera práctica de conocer su estado real.</p>
+<h2>CRL y OCSP: dos mecanismos, una misma obligación.</h2>
+<p>Existen dos métodos estándar para consultar el estado de revocación de un certificado, ambos especificados en la familia de estándares X.509 <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>:</p>
+<p><strong>CRL (Certificate Revocation List)</strong>: Lista emitida y firmada criptográficamente por el PSC que contiene todos los certificados revocados hasta la fecha. Se publica periódicamente y quien desee verificar un certificado debe descargar esa lista completa y comprobar si el número de serie en cuestión figura en ella. Es el método más antiguo y, como se verá, el menos compatible con la accesibilidad pública real.</p>
+<p><strong>OCSP (Online Certificate Status Protocol)</strong>: Protocolo definido en el RFC 6960 que permite consultar el estado de un certificado específico en tiempo real <sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>. En lugar de descargar una lista completa, el sistema de verificación envía una consulta al servidor del PSC y recibe una respuesta inmediata: válido, revocado o desconocido. Es más eficiente, más oportuno y sustancialmente más adecuado para construir servicios de consulta accesibles al público.</p>
+<p>Los navegadores modernos utilizan OCSP de forma transparente al verificar certificados de sitios HTTPS. Sin embargo, en el ámbito de la firma de documentos, varios PSCs locales no ofrecen un servicio OCSP públicamente consultable, y menos aún una interfaz web orientada al ciudadano.</p>
+<h2>Lo que ocurre en la práctica.</h2>
+<p>Las bases de datos públicas de los PSCs locales suelen mostrar únicamente los certificados <strong>activos en el momento de la consulta</strong>. Los certificados revocados o expirados no aparecen, lo que genera dos problemas concretos.</p>
+<p>El primero es operativo: al intentar verificar la firma de un documento de años anteriores, el software puede no encontrar el certificado correspondiente y arrojar un resultado negativo, aun cuando la firma fuera completamente válida en su momento.</p>
+<p>El segundo problema es más serio: <strong>la ausencia de información histórica sobre revocaciones impide determinar si un certificado fue invalidado por razones de seguridad.</strong> Considérese el siguiente caso: un funcionario firma digitalmente una resolución en 2023 con un certificado aparentemente válido. En 2024, ese certificado es revocado porque su clave privada fue comprometida. Si hoy se intenta verificar esa firma a través de los canales oficiales disponibles al público, no hay manera de detectar la revocación. La firma aparenta ser válida; los registros de revocación no están disponibles.</p>
+<p>Este escenario no es hipotético. Afecta directamente la trazabilidad de actos administrativos, contratos y documentos con valor legal, y socava la confianza que el sistema de firma digital está precisamente diseñado para generar.</p>
+<h2>El cumplimiento formal frente al cumplimiento real.</h2>
+<p>El CRL sí se publica. Es descargable desde <a href="https://efirma.com.py/repositorio/efirma2.crl">https://efirma.com.py/repositorio/efirma2.crl</a>.</p>
+<p>El problema es que se trata de un <strong>archivo binario en formato DER</strong>, no legible directamente. Para interpretarlo se requiere una herramienta técnica como OpenSSL:</p>
+<pre><code class="language-bash">$ openssl crl -inform DER -text -noout -in efirma2.crl -out efirma2.txt
+</code></pre>
+<p>Publicar un archivo de estas características y presentarlo como cumplimiento de la obligación de accesibilidad pública es satisfacer la forma de la norma mientras se vacía su contenido. La disposición legal no exige simplemente que exista un archivo; exige un servicio que cualquier persona pueda consultar. La diferencia es sustancial.</p>
+<p>Convertido a texto, el CRL presenta una estructura como la siguiente:</p>
+<pre><code>Certificate Revocation List (CRL):
+        Version 2 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: serialNumber=RUC80080099-0, CN=VIT S.A., OU=Prestador Cualificado de Servicios de Confianza, O=ICPP, C=PY
+        Last Update: Sep 27 18:53:02 2025 GMT
+        Next Update: Sep 28 06:53:02 2025 GMT
+        CRL extensions:
+            X509v3 CRL Number: 
+                4100
+            X509v3 Authority Key Identifier: 
+                BB:65:11:2B:67:ED:86:38:20:1C:28:67:19:14:04:65:EA:91:A1:B3
+            X509v3 Issuing Distribution Point: critical
+                Full Name:
+                  URI:https://www.efirma.com.py/repositorio/efirma2.crl
+
+Revoked Certificates:
+    Serial Number: 3CD7DB14CF35364E64726D4AA5C64282
+        Revocation Date: Jun 19 19:25:45 2023 GMT
+        CRL entry extensions:
+            X509v3 CRL Reason Code: 
+                Unspecified
+</code></pre>
+<p>La información contenida puede sintetizarse así:</p>
+<ol>
+<li><strong>Emisor del CRL</strong>: VIT S.A., identificada por su RUC, en su rol de autoridad certificadora.</li>
+<li><strong>Periodicidad de actualización</strong>: La lista fue actualizada el 27 de septiembre de 2025, con próxima actualización prevista para el día siguiente. Una ventana de doce horas representa un período concreto de exposición a información desactualizada.</li>
+<li><strong>Identificadores de integridad</strong>: El número de CRL y la clave de la autoridad permiten verificar que la lista no fue modificada desde su emisión.</li>
+<li><strong>Certificados revocados</strong>: Número de serie, fecha de revocación y, cuando se documenta, razón. En el ejemplo, la razón figura como <em>Unspecified</em>, lo que dificulta cualquier auditoría posterior sobre las circunstancias de la revocación.</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+Si un certificado ha expirado y no aparece en el CRL, ¿la firma es válida?
+No necesariamente. La validación de una firma digital requiere dos condiciones independientes: (1) el certificado debe estar dentro de su período de validez en el momento de la firma, y (2) el certificado no debe haber sido revocado. Para que la fecha de la firma sea verificable con certeza en el tiempo, las firmas deben incorporar un sello de tiempo (<em>timestamp</em>) criptográfico.</p>
+</blockquote>
+<h2>Lo que debería existir.</h2>
+<p>La brecha entre el estado actual y el estándar exigible no responde a limitaciones técnicas. Las herramientas y protocolos necesarios están normalizados desde hace décadas. Es, en esencia, una cuestión de voluntad regulatoria y de exigencia efectiva de cumplimiento.</p>
+<p>Un servicio de consulta genuinamente accesible al público debería contemplar, como mínimo:</p>
+<ul>
+<li><strong>Un portal web</strong> donde cualquier persona pueda ingresar el número de serie de un certificado y obtener su estado: vigente, expirado o revocado, con fecha y razón de revocación cuando corresponda.</li>
+<li><strong>Un servicio OCSP público</strong>, consultable por software de verificación, conforme al RFC 6960.</li>
+<li><strong>Historial de revocaciones accesible</strong>, no solo el estado vigente. Un certificado revocado hace dos años sigue siendo relevante para auditar documentos firmados en ese período.</li>
+<li><strong>Razones de revocación documentadas</strong>. La distinción entre una revocación por expiración programada y una por compromiso de seguridad tiene implicancias legales completamente distintas.</li>
+</ul>
+<p>El marco normativo técnico existe: el RFC 5280 regula el estándar CRL <sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>; el RFC 6960 define OCSP; el perfil X.509 establece la estructura de los certificados. Lo que falta es que el organismo regulador exija la implementación efectiva de estos estándares y que los PSCs rindan cuentas por el cumplimiento real —no meramente formal— de la obligación legal de accesibilidad.</p>
+<hr>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Reglamento (UE) N.º 910/2014 del Parlamento Europeo y del Consejo, de 23 de julio de 2014, relativo a la identificación electrónica y los servicios de confianza para las transacciones electrónicas en el mercado interior (eIDAS). <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Cooper, D. et al. (2008). <em>Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</em>. RFC 5280. IETF. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>ITU-T Recommendation X.509 (2019). <em>Information technology – Open Systems Interconnection – The Directory: Public-key and attribute certificate frameworks</em>. ITU. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>Santesson, S. et al. (2013). <em>X.509 Internet Public Key Infrastructure Online Certificate Status Protocol – OCSP</em>. RFC 6960. IETF. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>Cooper, D. et al. (2008). RFC 5280, op. cit. <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

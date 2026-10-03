@@ -1,5 +1,6 @@
 ---
 title: "Enfoque"
+nav: "Approach"
 date: 2024-07-25T13:16:19+02:00
 tags: ["enfoque", "neutralidad"]
 categories: ["page"]

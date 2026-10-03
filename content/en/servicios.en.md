@@ -1,5 +1,6 @@
 ---
 title: "Forensics and Trust"
+nav: "Services"
 date: 2026-02-18T13:16:19+02:00
 tags: ["forensics", "trust"]
 categories: ["page"]

@@ -1,5 +1,6 @@
 ---
 title: "Detalle de Servicios"
+nav: "Details"
 date: 2026-02-17T13:20:19+02:00
 tags: ["detalle", "servicios"]
 categories: ["page"]

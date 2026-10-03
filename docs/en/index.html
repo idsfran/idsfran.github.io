@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forensics and Trust — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/en/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/en/" aria-current="page">Services</a>
+      <a href="/en/enfoque/">Approach</a>
+      <a href="/en/detalles/">Details</a>
+      <a href="/en/about/">About</a>
+    </nav>
+    <div class="opciones">
+      <a href="/es/" lang="es" hreflang="es">Español</a>
+      <button id="tema" type="button" data-oscuro="Dark mode" data-claro="Light mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Forensics and Trust</h1>
+      
+<p><strong>Digital Forensics and Trust Services</strong></p>
+<p>Professional <strong>expert witness services in computer science and IT</strong>, with advanced specialization in <strong>digital evidence analysis</strong>, <strong>Public Key Infrastructure (PKI)</strong>, <strong>advanced electronic signature systems</strong>, and the full range of <strong>Trust Services</strong> governed by regulations such as eIDAS (Regulation (EU) No 910/2014) and complementary national legislation.</p>
+<p>My expert witness work is designed to deliver <strong>objective, rigorous technical clarity</strong> in judicial proceedings (civil, criminal, commercial, labor, or administrative) where cryptographic technologies play a key role, including qualified digital certificates, timestamps, strong authentication systems (including biometrics and multi-factor), certified electronic communications, log records, IP addresses, metadata, storage devices, cloud environments, and networks in general.</p>
+<h3>Key Areas of Expertise</h3>
+<ul>
+<li>
+<p>Verification of <strong>authenticity, integrity, and non-repudiation</strong> of electronically signed documents (simple, advanced, and qualified electronic signatures).</p>
+</li>
+<li>
+<p>Forensic analysis of <strong>digital evidence</strong> from computers, mobile phones, tablets, servers, hard drives, USB drives, memory cards, messaging systems (WhatsApp, email, Telegram, Signal, etc.), social networks, and collaborative platforms.</p>
+</li>
+<li>
+<p>Determination of the <strong>true creation, modification, or sending date and time</strong> of files and messages through metadata analysis and reliable trusted timestamps.</p>
+</li>
+<li>
+<p>Investigation of <strong>security incidents</strong> with judicial relevance: unauthorized access, intrusions, malware, phishing, digital identity theft, leakage or theft of confidential information, tampering with electronic evidence.</p>
+</li>
+<li>
+<p>Chronological and technical reconstruction of <strong>digital events</strong> (who did what, when, from where, and using what means).</p>
+</li>
+<li>
+<p>Audit and expert assessment of <strong>enterprise or public administration PKI systems</strong>: certificate validity, revocation, trust hierarchies, standards compliance.</p>
+</li>
+<li>
+<p>Evaluation of the <strong>chain of custody</strong> for digital evidence from collection to court presentation (SHA-2/SHA-3 hashing, bit-for-bit forensic imaging, write-blocking, chronological documentation).</p>
+</li>
+<li>
+<p>Preparation of <strong>detailed expert reports</strong>, suitable for ratification in court, using technical language accessible to legal professionals with well-founded conclusions.</p>
+</li>
+<li>
+<p>Counter-expertise and critical review of third-party expert reports.</p>
+</li>
+<li>
+<p>Technical advisory support before or during proceedings to attorneys and legal representatives on strategies involving digital evidence.</p>
+</li>
+</ul>
+<p>All procedures adhere to internationally accepted standards in <strong>digital forensics</strong> (ISO/IEC 27037, 27042, NIST SP 800-86, UNE guidelines, chain-of-custody best practices) to ensure that evidence is <strong>admissible, authentic, complete, reliable, and credible</strong> before any court.</p>
+<hr>
+<h2>Approach</h2>
+<p>The expertise is conducted with criteria of:</p>
+<ul>
+<li>Technical rigor</li>
+<li>Expository clarity</li>
+<li>Neutrality and independence</li>
+<li>Adequacy to the current regulatory framework in Trust Services
+The reports are drafted in comprehensible language for the judicial domain, without losing technical precision, facilitating their evidentiary assessment.</li>
+</ul>
+<hr>
+<h2>Services</h2>
+<ul>
+<li>Preparation of expert reports</li>
+<li>Technical analysis of digital documentation</li>
+<li>Technical assistance to law firms</li>
+<li>Evaluation of the technical validity of digital signatures</li>
+<li>Participation in hearings and ratification of reports</li>
+</ul>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

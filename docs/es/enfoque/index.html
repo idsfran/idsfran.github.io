@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enfoque — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/es/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/es/">Servicios</a>
+      <a href="/es/enfoque/" aria-current="page">Enfoque</a>
+      <a href="/es/detalles/">Detalle</a>
+      <a href="/es/articulos/">Artículos</a>
+    </nav>
+    <div class="opciones">
+      <a href="/en/enfoque/" lang="en" hreflang="en">English</a>
+      <button id="tema" type="button" data-oscuro="Modo oscuro" data-claro="Modo claro">Modo oscuro</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Enfoque</h1>
+      
+<p><strong>Enfoque del peritaje</strong></p>
+<p>El peritaje se lleva a cabo bajo estrictos criterios de:</p>
+<ul>
+<li>
+<p><strong>Rigor técnico absoluto</strong>: Aplicación de metodologías forenses validadas internacionalmente, con uso de herramientas y protocolos actualizados para garantizar la precisión y reproducibilidad de cada análisis.</p>
+</li>
+<li>
+<p><strong>Claridad expositiva máxima</strong>: Redacción de informes en un lenguaje preciso pero accesible al ámbito judicial, evitando jerga innecesaria sin sacrificar detalle técnico, para facilitar su comprensión y valoración probatoria por jueces, fiscales, letrados y peritos de parte.</p>
+</li>
+<li>
+<p><strong>Neutralidad e independencia total</strong>: Actuación imparcial, sin vínculos con las partes, con transparencia en métodos, limitaciones y posibles sesgos, cumpliendo códigos deontológicos de peritos judiciales y estándares éticos de la profesión.</p>
+</li>
+<li>
+<p><strong>Adecuación plena al marco normativo vigente</strong>: Cumplimiento riguroso del Reglamento eIDAS (Reglamento (UE) nº 910/2014, modificado por el Reglamento (UE) 2024/1183 que establece el Marco Europeo de Identidad Digital – eIDAS 2.0), junto con la legislación nacional complementaria (Ley 6/2020 de servicios electrónicos de confianza en España y disposiciones autonómicas o sectoriales aplicables), incluyendo requisitos de Servicios de Confianza cualificados, cadena de custodia digital y admisibilidad de prueba electrónica.</p>
+</li>
+</ul>
+<p>Los informes periciales se elaboran con el objetivo primordial de constituir una prueba técnica sólida, objetiva y fácilmente valorable en sede judicial: conclusiones claras y fundamentadas, apoyadas en evidencias documentadas (hashes, imágenes forenses, logs verificados, etc.), y listas para ratificación oral si procede.</p>
+<p>Este enfoque no es solo un compromiso declarado: es la base operativa de cada intervención, asegurando que la evidencia digital aporte certeza en lugar de controversia.</p>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

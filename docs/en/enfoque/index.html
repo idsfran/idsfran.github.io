@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enfoque — Idalina Insfrán</title>
+  
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Aplica el modo elegido antes de pintar la página, así no parpadea.
+    try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="columna">
+    <a class="marca" href="/en/">Idalina Insfrán</a>
+    <nav aria-label="Menú">
+      <a href="/en/">Services</a>
+      <a href="/en/enfoque/" aria-current="page">Approach</a>
+      <a href="/en/detalles/">Details</a>
+      <a href="/en/about/">About</a>
+    </nav>
+    <div class="opciones">
+      <a href="/es/enfoque/" lang="es" hreflang="es">Español</a>
+      <button id="tema" type="button" data-oscuro="Dark mode" data-claro="Light mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main class="columna">
+    <article>
+      <h1>Enfoque</h1>
+      
+<p><strong>Expert Assessment Approach</strong></p>
+<p>The expert assessment is conducted under strict criteria of:</p>
+<p><strong>Absolute technical rigor</strong>: Application of internationally validated forensic methodologies, using updated tools and protocols to ensure the precision and reproducibility of each analysis.</p>
+<p><strong>Maximum expository clarity</strong>: Reports are drafted in precise yet accessible language for the judicial sphere, avoiding unnecessary jargon without sacrificing technical detail, to facilitate understanding and evidentiary evaluation by judges, prosecutors, attorneys, and party-appointed experts.</p>
+<p><strong>Total neutrality and independence</strong>: Impartial action, free from ties to any party, with transparency in methods, limitations, and potential biases, adhering to the deontological codes of judicial experts and the ethical standards of the profession.</p>
+<p><strong>Full compliance with the current regulatory framework</strong>: Strict adherence to the eIDAS Regulation (Regulation (EU) No 910/2014, as amended by Regulation (EU) 2024/1183 establishing the European Digital Identity Framework – eIDAS 2.0), along with complementary national legislation (Law 6/2020 on trusted electronic services in Spain and applicable regional or sectoral provisions), including requirements for qualified trust services, digital chain of custody, and admissibility of electronic evidence.</p>
+<p>Expert reports are prepared with the primary objective of serving as robust, objective, and easily assessable technical evidence in court: clear and well-founded conclusions, supported by documented evidence (hashes, forensic images, verified logs, etc.), and ready for oral ratification if required.
+This approach is not merely a stated commitment—it is the operational foundation of every intervention, ensuring that digital evidence provides certainty rather than controversy.</p>
+
+    </article>
+  </main>
+
+  <footer class="columna">© 2026 Idalina Insfrán</footer>
+
+  <script>
+    // Botón de modo oscuro/claro: recuerda la elección en el navegador.
+    (function () {
+      var boton = document.getElementById('tema');
+      var raiz = document.documentElement;
+      function actual() {
+        return raiz.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function etiqueta() {
+        boton.textContent = actual() === 'dark' ? boton.dataset.claro : boton.dataset.oscuro;
+      }
+      boton.addEventListener('click', function () {
+        var nuevo = actual() === 'dark' ? 'light' : 'dark';
+        raiz.dataset.theme = nuevo;
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+        etiqueta();
+      });
+      etiqueta();
+    })();
+  </script>
+</body>
+</html>

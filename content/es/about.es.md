@@ -1,0 +1,9 @@
+---
+title: "Acerca de"
+nav: "Acerca de"
+categories: ["pagina"]
+menu: topnav
+weight: 40
+draft: true
+---
+Escribí acá. Cuando esté lista, cambiá `draft: true` por `draft: false`.
