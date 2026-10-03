@@ -4,6 +4,6 @@ nav: "Acerca de"
 categories: ["pagina"]
 menu: topnav
 weight: 40
-draft: true
+draft: false
 ---
 Escribí acá. Cuando esté lista, cambiá `draft: true` por `draft: false`.
