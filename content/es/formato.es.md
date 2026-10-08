@@ -11,8 +11,6 @@ noSummary: false
 draft: false
 ---
 
-## Formato básico de un dictámen.
-
 <iframe
   src="https://docs.insfran.es.eu.org/main.pdf"
   width="100%"

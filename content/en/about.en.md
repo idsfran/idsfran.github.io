@@ -5,15 +5,14 @@ categories: ["about"]
 menu: topnav
 weight: 40
 ---
-Idalina Insfrán  
-
-Perito Informático
-
-Matrícula CSJ Nº 5736
-
-Email: insfran@tuta.io  
+| Idalina Insfrán       | Asunción |
+| --------------------- | -------: |
+| Perito Informático    | Paraguay |
+| Matrícula CSJ Nº 5736 |          |
+|                       |          |
 
 PGP:  
+
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: User ID:	Idalina Insfrán <insfran@tuta.io>
