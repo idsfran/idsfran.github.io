@@ -43,12 +43,13 @@ El mensaje que escriba en el siguiente formulario me llegará al celular de mane
 
 <style>
   #ntfy-box {
-    max-width: 420px;
+    max-width: 500px;
     margin: 1.5rem auto;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-family: inherit;
+    font-size: 80%;
   }
   #ntfy-box input,
   #ntfy-box textarea {
@@ -85,7 +86,7 @@ El mensaje que escriba en el siguiente formulario me llegará al celular de mane
 
 <div id="ntfy-box">
   <input type="text" id="ntfy-titulo" placeholder="Título">
-  <textarea id="ntfy-mensaje" placeholder="Mensaje"></textarea>
+  <textarea id="ntfy-mensaje" placeholder="Mensaje. No olvide dejar un modo de contactarlo: mobile, e-mail..."></textarea>
   <button id="ntfy-enviar">Enviar notificación</button>
   <p id="ntfy-estado"></p>
 </div>
@@ -104,7 +105,7 @@ El mensaje que escriba en el siguiente formulario me llegará al celular de mane
         body: mensaje,
         headers: { 'Title': titulo }
       });
-      estado.textContent = r.ok ? 'Enviado ✔' : 'Error: ' + r.status;
+      estado.textContent = r.ok ? 'Send ✔' : 'Error: ' + r.status;
     } catch (e) {
       estado.textContent = 'No se pudo enviar';
     }

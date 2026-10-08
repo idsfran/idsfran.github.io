@@ -35,3 +35,77 @@ al7wPWwAww+6AQCqeIx2jJ9/2Y+HK2Vf+C0vrvbVqCjhQOm/+CdCVVRCCw==
 =/LYb
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+## Direct Message
+
+The message writing in the next form will arrive at my mobile instantly.
+
+<style>
+  #ntfy-box {
+    max-width: 500px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 80%;
+  }
+  #ntfy-box input,
+  #ntfy-box textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+  }
+  #ntfy-box textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+  #ntfy-box button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+  }
+  #ntfy-box button:hover {
+    background: #555;
+  }
+  #ntfy-estado {
+    margin: 0.75rem 0 0;
+    min-height: 1.2em;
+  }
+</style>
+
+<div id="ntfy-box">
+  <input type="text" id="ntfy-titulo" placeholder="Title">
+  <textarea id="ntfy-mensaje" placeholder="Note: Don't forget to include a way to contact you: mobile, e-mail..."></textarea>
+  <button id="ntfy-enviar">Send it!</button>
+  <p id="ntfy-estado"></p>
+</div>
+
+<script>
+  const TEMA = '5hPJsf0aIA'; // cambialo por un nombre difícil de adivinar
+
+  document.getElementById('ntfy-enviar').addEventListener('click', async () => {
+    const titulo = document.getElementById('ntfy-titulo').value;
+    const mensaje = document.getElementById('ntfy-mensaje').value;
+    const estado = document.getElementById('ntfy-estado');
+
+    try {
+      const r = await fetch('https://ntfy.sh/' + TEMA, {
+        method: 'POST',
+        body: mensaje,
+        headers: { 'Title': titulo }
+      });
+      estado.textContent = r.ok ? 'Enviado ✔' : 'Error: ' + r.status;
+    } catch (e) {
+      estado.textContent = 'No se pudo enviar';
+    }
+  });
+</script>
